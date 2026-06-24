@@ -1,0 +1,32 @@
+:root {
+    --theme: #000119;
+    --lightpink: #eee0ff;
+    --border: #1e104e;
+    --gradient-primary: linear-gradient(90deg, #e855de 25%, #5400ee);
+    --gradient-secondary: linear-gradient(263.72deg, #ffa205 5.37%, #ff5898 48.9%, #b41cdd 99.03%);
+}
+body {
+    background: var(--theme);
+    color: var(--lightpink);
+    font-family: var(--space-grotesk);
+    margin: 0px;
+}
+a {
+    color: var(--lightpink);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.text-gradient {
+    color: transparent;
+    background-clip: text !important;
+    -webkit-background-clip: text;
+}
+
+::-webkit-scrollbar {
+    width:6px;
+    background: #24104A;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-secondary);
+}

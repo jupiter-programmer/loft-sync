@@ -1,0 +1,12 @@
+export { RxDashboard } from 'react-icons/rx';
+export { PiBird } from 'react-icons/pi';
+export { LuEgg } from 'react-icons/lu';
+export { MdOutlineRunningWithErrors } from 'react-icons/md';
+export { FaChartLine, FaRegCalendarAlt } from 'react-icons/fa';
+export { BsHeartPulse } from 'react-icons/bs';
+export { RiHome9Line } from 'react-icons/ri';
+export { AiOutlineDollarCircle } from 'react-icons/ai';
+export { TbReport } from 'react-icons/tb';
+export { IoSettingsOutline } from 'react-icons/io5';
+export { TiMessages } from 'react-icons/ti';
+export { FaArrowRightToBracket } from 'react-icons/fa6';
