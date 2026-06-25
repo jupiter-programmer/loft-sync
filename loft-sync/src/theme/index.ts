@@ -1,5 +1,10 @@
 import { createTheme } from '@mui/material';
 export const theme = createTheme({
+    palette: {
+        primary: {
+            main: '#b41cdd',
+        },
+    },
     components: {
         MuiContainer: {
             styleOverrides: {
@@ -22,6 +27,7 @@ export const theme = createTheme({
             },
             styleOverrides: {
                 root: {
+                    color: 'var(--lightpink)',
                     fontFamily: 'var(--space-grotesk)',
                     textTransform: 'capitalize',
                 },

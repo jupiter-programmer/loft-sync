@@ -2,6 +2,7 @@
     --theme: #000119;
     --lightpink: #eee0ff;
     --border: #1e104e;
+    --border-2: #0d0a38;
     --gradient-primary: linear-gradient(90deg, #e855de 25%, #5400ee);
     --gradient-secondary: linear-gradient(263.72deg, #ffa205 5.37%, #ff5898 48.9%, #b41cdd 99.03%);
 }
@@ -15,6 +16,9 @@ a {
     color: var(--lightpink);
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
+}
+input {
+    font-family: var(--space-grotesk);
 }
 
 .text-gradient {
