@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Avatar, Box, ButtonBase, Typography } from '@mui/material';
+import { Avatar, Box, ButtonBase, Tooltip, Typography } from '@mui/material';
 import { FaArrowRightToBracket } from '@/assets/icons';
 import { Sejin } from '@/assets/images';
 export const UserCard = () => {
@@ -15,9 +15,11 @@ export const UserCard = () => {
                         alignItems: 'center',
                         gap: 1.5,
                     }}>
-                        <Avatar src={Sejin.src} sx={styles.avatar}>
-                            S
-                        </Avatar>
+                        <Tooltip title='Sejin Ahmed'>
+                            <Avatar src={Sejin.src} sx={styles.avatar}>
+                                S
+                            </Avatar>
+                        </Tooltip>
                         <Box>
                             <Typography 
                                 sx={styles.name} 
@@ -28,7 +30,7 @@ export const UserCard = () => {
                             <Typography sx={{
                                 fontSize: 12,
                             }}>
-                                Admin
+                                Loft Owner
                             </Typography>
                         </Box>
                     </Box>
@@ -47,12 +49,11 @@ const styles = {
     },
     container: {
         p: 1.5,
-        gap: 8,
+        gap: 9,
         background: `
-            linear-gradient(320deg, #b41cdd66 0%, #b41cdd26 25%, transparent 65%)
+            linear-gradient(to right, #170249e7, #420177e1, #170249e7)
         `,
         textAlign: 'start',
-        border: '1px solid var(--border)',
         borderRadius: 2,
         overflow: 'hidden',
         transition: '1s',

@@ -1,9 +1,8 @@
 import '../globals.css';
-import Root from './root';
+import DashboardRoot from './root';
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 import { AppThemeProvider } from '@/providers';
-import { TopLoader } from '@/components/ui';
 // font
 const spaceGrotesk = Space_Grotesk ({
   variable: '--space-grotesk',
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
   description: 'Pigeon Loft Management Software.',
 };
 // root
-export default function RootLayout({
+export default function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -24,10 +23,9 @@ export default function RootLayout({
     <html lang='en' className={spaceGrotesk.variable}>
       <AppThemeProvider>
         <body>
-          <Root>
-            <TopLoader/>
+          <DashboardRoot>
             { children }
-          </Root>
+          </DashboardRoot>
         </body>
       </AppThemeProvider>
     </html>

@@ -23,6 +23,27 @@ a {
     -webkit-background-clip: text;
 }
 
+
+
+.sidebar-item.active button {
+    background: linear-gradient(to right, #170249e7, #420177e1, #170249e7);
+    border: 1px solid #510b86c2;
+}
+.sidebar-item.active {
+    position: relative;
+}
+.sidebar-item.active::before {
+    content: '';
+    width: 2px;
+    position: absolute;
+    left: -1px;
+    top: 8px;
+    bottom: 8px;
+    background: #c814ff80;
+    z-index: 2;
+}
+
+
 ::-webkit-scrollbar {
     width:6px;
     background: #24104A;

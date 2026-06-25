@@ -27,14 +27,19 @@ export const theme = createTheme({
                 },
             },
         },
-        MuiDivider: {
+        MuiTooltip: {
+            defaultProps: {
+                arrow: true,
+                placement: 'auto',
+                describeChild: true,
+            },
             styleOverrides: {
-                root: {
-                    color: '#eee0ff',
-                    margin: '20px 0px',
-                    ':before, :after': {
-                        borderTop: 'thin solid #261644',
-                    },
+                tooltip: {
+                    background: 'var(--gradient-secondary)',
+                    color: 'var(--lightpink)',
+                },
+                arrow: {
+                    color: '#b41cdd',
                 },
             },
         },

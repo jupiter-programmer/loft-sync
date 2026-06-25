@@ -1,19 +1,25 @@
 import { ReactNode } from 'react';
+import { SidebarProvider } from '@/providers';
 import Box from '@mui/material/Box';
-import { Sidebar } from '@/components/dashboard';
-export default function Root ({
+import { Sidebar, Topbar } from '@/components/dashboard';
+import { TopLoader } from '@/components/ui';
+export default function DashboardRoot ({
     children
 } : {
     children: ReactNode;
 }) {
     return (
-        <Box sx={{ display: 'flex' }}>
-            <Box sx={{ flex: 0 }}>
-                <Sidebar/>
+        <SidebarProvider>
+            <TopLoader/>
+            <Box sx={{ display: 'flex' }}>
+                <Box sx={{ flex: 0 }}>
+                    <Sidebar/>
+                </Box>
+                <Box sx={{ flex: 1 }}>
+                    <Topbar/>
+                    { children }
+                </Box>
             </Box>
-            <Box sx={{ flex: 1 }}>
-                { children }
-            </Box>
-        </Box>
+        </SidebarProvider>
     );  
 };
