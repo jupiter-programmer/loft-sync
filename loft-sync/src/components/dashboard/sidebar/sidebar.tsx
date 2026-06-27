@@ -9,7 +9,10 @@ export default function Sidebar () {
     return (
         <Box sx={{
             ...styles.sidebar,
-            width: open ? 270 : 65,
+            width: {
+                xs: !open ? 'calc(100vw - 65px)' : 65,
+                sm: open ? 270 : 65,
+            },
         }}>
             <Brand/>
             <ItemsContainer/>

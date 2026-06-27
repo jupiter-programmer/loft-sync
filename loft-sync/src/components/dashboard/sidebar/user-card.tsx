@@ -7,7 +7,7 @@ export const UserCard = () => {
         <Box sx={styles.parent}>
             <Link 
                 href='/profile' 
-                style={{ flexShrink: 0, width: '100%' }} 
+                style={{ width: '100%' }} 
             >
                 <ButtonBase sx={styles.container}>
                     <Box sx={{
@@ -59,13 +59,13 @@ const styles = {
         transition: '1s',
     },
     avatar: { 
-        background: 'var(--gradient-secondary)',
+        background: 'var(--gradient-primary)',
     },
     name: {
         fontSize: 14,
         fontWeight: 600,
         lineHeight: 1.1,
-        background: 'var(--gradient-secondary)',
+        background: 'var(--gradient-primary)',
         flexShrink: 0,
         whiteSpace: 'nowrap',
     },

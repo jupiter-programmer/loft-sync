@@ -1,50 +1,38 @@
-import { Badge, Box, IconButton } from '@mui/material';
-import { GoBell, HiOutlineMail } from '@/assets/icons';
+import Box from '@mui/material/Box';
 import SidebarToggler from './sidebar-toggler';
 import SearchBox from './search-box';
-
+import Notification from './notification';
+import Message from './message';
+import AccountMenu from './account-menu';
 export default function Topbar () {
     return (
         <Box sx={{
             ...styles.flexbox,
             ...styles.container,
         }}>
-            <Box sx={{ ...styles.flexbox, gap: 2 }}>
+            <Box sx={{ 
+                ...styles.flexbox, 
+                gap: 2,
+            }}>
                 <SidebarToggler/>
                 <SearchBox/>
             </Box>
-                {/* notifications */}
                 <Box sx={{
                     ...styles.flexbox,
                     gap: 2,
                 }}>
-                    <IconButton aria-label='notifications' sx={{ color: 'var(--lightpink)' }}>
-                      <Badge
-                        badgeContent={11}
-                        color='primary'
-                        max={10}
-                      >
-                        <GoBell/>
-                      </Badge>
-                    </IconButton>
-                    <IconButton aria-label='notifications' sx={{ color: 'var(--lightpink)' }}>
-                      <Badge
-                        badgeContent={12}
-                        color='primary'
-                        max={10}
-                      >
-                        <HiOutlineMail/>
-                      </Badge>
-                    </IconButton>
+                    <Notification/>
+                    <Message/>
+                    <AccountMenu/>
                 </Box>
         </Box>
     );
 };
-
 const styles = {
     container: {
         p: 2,
         background: 'transparent',
+        backdropFilter: 'blur(5px)',
         justifyContent: 'space-between',
         position: 'sticky',
         top: 0,

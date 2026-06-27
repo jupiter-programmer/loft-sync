@@ -27,7 +27,10 @@ export const ItemsContainer = () => {
                                 sx={{ 
                                     flexShrink: 0, 
                                     whiteSpace: 'nowrap',
-                                    opacity: open ? 1 : 0,
+                                    opacity: {
+                                        xs: !open ? 1 : 0,
+                                        sm: open ? 1 : 0,
+                                    },
                                     transition: '0.5s',
                                 }}
                             >

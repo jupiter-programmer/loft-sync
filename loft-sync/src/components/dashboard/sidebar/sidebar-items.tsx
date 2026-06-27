@@ -3,6 +3,7 @@ import {
     BsHeartPulse, 
     FaChartLine, 
     FaRegCalendarAlt, 
+    FiUser, 
     IoSettingsOutline, 
     LuEgg, 
     MdOutlineRunningWithErrors, 
@@ -68,6 +69,11 @@ export const sidebarItems = [
         label: 'Messages',
         href: '/message',
         icon: TiMessages,
+    },
+    {
+        label: 'Profile',
+        href: '/profile',
+        icon: FiUser,
     },
     {
         label: 'Settings',

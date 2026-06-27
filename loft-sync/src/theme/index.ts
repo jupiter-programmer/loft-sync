@@ -33,6 +33,13 @@ export const theme = createTheme({
                 },
             },
         },
+        MuiIconButton: {
+            styleOverrides: {
+                root: {
+                    color: 'var(--lightpink)',
+                },
+            },
+        },
         MuiTooltip: {
             defaultProps: {
                 arrow: true,
@@ -41,11 +48,47 @@ export const theme = createTheme({
             },
             styleOverrides: {
                 tooltip: {
-                    background: 'var(--gradient-secondary)',
+                    background: 'var(--gradient-primary)',
                     color: 'var(--lightpink)',
                 },
                 arrow: {
                     color: '#b41cdd',
+                },
+            },
+        },
+        MuiMenu: {
+            styleOverrides: {
+                paper: {
+                    width: 200,
+                    color: 'var(--lightpink)',
+                    background: '#08062f',
+                    border: '1px solid var(--border)',
+                    filter: 'drop-shadow(0px 2px 8px #b31cdd1e)',
+                    overflow: 'visible',
+                    borderRadius: 10,
+                    padding: '0px 10px',
+                },
+            },
+        },
+        MuiMenuItem: {
+            styleOverrides: {
+                root: {
+                    fontSize: 15,
+                    fontFamily: 'var(--space-grotesk)',
+                    color: 'var(--lightpink)',
+                    borderRadius: 6,
+                    'svg': {
+                        fontSize: 20,
+                        color: 'var(--lightpink)',
+                    },
+                },
+            },
+        },
+        MuiDivider: {
+            styleOverrides: {
+                root: {
+                    margin: '10px 0px',
+                    borderColor: 'var(--border)',
                 },
             },
         },

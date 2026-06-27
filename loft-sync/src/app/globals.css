@@ -3,8 +3,8 @@
     --lightpink: #eee0ff;
     --border: #1e104e;
     --border-2: #0d0a38;
-    --gradient-primary: linear-gradient(90deg, #e855de 25%, #5400ee);
-    --gradient-secondary: linear-gradient(263.72deg, #ffa205 5.37%, #ff5898 48.9%, #b41cdd 99.03%);
+    --gradient-primary: linear-gradient(263.72deg, #ffa205 5.37%, #ff5898 48.9%, #b41cdd 99.03%);
+    --gradient-secondary: linear-gradient(90deg, #e855de 25%, #5400ee);
 }
 body {
     background: var(--theme);
@@ -53,5 +53,5 @@ input {
     background: #24104A;
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--gradient-secondary);
+    background: var(--gradient-primary);
 }
