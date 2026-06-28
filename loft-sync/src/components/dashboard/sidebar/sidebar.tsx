@@ -10,7 +10,7 @@ export default function Sidebar () {
         <Box sx={{
             ...styles.sidebar,
             width: {
-                xs: !open ? 'calc(100vw - 65px)' : 65,
+                xs: 0,
                 sm: open ? 270 : 65,
             },
         }}>
@@ -25,7 +25,7 @@ const styles = {
         height: '100vh',
         background: '#000219',
         borderRight: '1px solid var(--border)',
-        display: 'flex',
+        display: { xs: 'none', sm: 'flex' },
         flexDirection: 'column',
         transition: 'width 1s',
         overflow: 'hidden',

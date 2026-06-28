@@ -15,7 +15,7 @@ export default function DashboardRoot ({
                 <Box sx={{ flex: 0 }}>
                     <Sidebar/>
                 </Box>
-                <Box sx={{ flex: 1, height: '100vh', overflowX: 'hidden' }}>
+                <Box sx={{ flex: 1, height: { sm: '100vh' }, overflowX: { sm: 'hidden' } }}>
                     <Topbar/>
                     { children }
                 </Box>

@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 import SidebarToggler from './sidebar-toggler';
+import MobileSidebar from '../sidebar/mobile-sidebar';
 import SearchBox from './search-box';
 import Notification from './notification';
 import Message from './message';
@@ -14,6 +15,7 @@ export default function Topbar () {
                 ...styles.flexbox, 
                 gap: 2,
             }}>
+                <MobileSidebar/>
                 <SidebarToggler/>
                 <SearchBox/>
             </Box>
@@ -32,10 +34,11 @@ const styles = {
     container: {
         p: 2,
         background: 'transparent',
-        backdropFilter: 'blur(5px)',
+        backdropFilter: 'blur(3px)',
         justifyContent: 'space-between',
         position: 'sticky',
-        top: 0,
+        top: 1,
+        zIndex: 'var(--z-index)',
     },
     flexbox: {
         display: 'flex',

@@ -5,6 +5,7 @@
     --border-2: #0d0a38;
     --gradient-primary: linear-gradient(263.72deg, #ffa205 5.37%, #ff5898 48.9%, #b41cdd 99.03%);
     --gradient-secondary: linear-gradient(90deg, #e855de 25%, #5400ee);
+    --z-index: 35865;
 }
 body {
     background: var(--theme);
@@ -16,6 +17,7 @@ a {
     color: var(--lightpink);
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
+    outline: 0px;
 }
 input {
     font-family: var(--space-grotesk);
@@ -27,6 +29,13 @@ input {
     -webkit-background-clip: text;
 }
 
+/* Custom css library */
+.flex {
+    display: flex;
+}
+.items-center {
+    align-items: center;
+}
 
 
 .sidebar-item.active button {
@@ -49,7 +58,7 @@ input {
 
 
 ::-webkit-scrollbar {
-    width:6px;
+    width: 3px;
     background: #24104A;
 }
 ::-webkit-scrollbar-thumb {

@@ -1,44 +1,43 @@
-'use client';
-import { useSidebar } from '@/hooks';
-import { Box, Button, Tooltip, Typography } from '@mui/material';
+import React from 'react';
+import { Box, Button, Tooltip, Typography, Divider } from '@mui/material';
 import { CustomLink } from '@/components/ui';
 import { sidebarItems } from './sidebar-items';
-export const ItemsContainer = () => {
-    const { open } = useSidebar();
+export const ItemsContainer = ({
+    onItemClick,
+} : {
+    onItemClick?: () => void;
+}) => {
     return (
         <Box sx={styles.container}>
-            { sidebarItems.map(({ href, label, icon: Icon }, i) => 
-                <Tooltip 
-                    title={label} 
-                    key={i}
-                >
-                    <CustomLink 
-                        href={href} 
-                        className='sidebar-item'
-                        style={{ flexShrink: 0 }} 
-                    >
-                        <Button sx={styles.button}>
-                            { <Icon 
-                                size={20} 
-                                style={{ flexShrink: 0 }}/> 
-                            }
-                            <Typography 
-                                component='span' 
-                                sx={{ 
-                                    flexShrink: 0, 
-                                    whiteSpace: 'nowrap',
-                                    opacity: {
-                                        xs: !open ? 1 : 0,
-                                        sm: open ? 1 : 0,
-                                    },
-                                    transition: '0.5s',
-                                }}
-                            >
-                                { label }
-                            </Typography>
-                        </Button>
-                    </CustomLink>
-                </Tooltip>
+            { sidebarItems.map(({ href, label, icon: Icon, separator }, i) => 
+                <React.Fragment key={i}>
+                    { separator === 'divider' && 
+                        <Divider sx={{ my: 2.5 }}/>
+                    }
+                    <Tooltip title={label}>
+                        <CustomLink 
+                            href={href} 
+                            className='sidebar-item'
+                            style={{ flexShrink: 0 }} 
+                        >
+                            <Button sx={styles.button} onClick={onItemClick}>
+                                { <Icon 
+                                    size={20} 
+                                    style={{ flexShrink: 0 }}/> 
+                                }
+                                <Typography 
+                                    component='span' 
+                                    sx={{ 
+                                        flexShrink: 0, 
+                                        whiteSpace: 'nowrap',
+                                    }}
+                                >
+                                    { label }
+                                </Typography>
+                            </Button>
+                        </CustomLink>
+                    </Tooltip>
+                </React.Fragment>
             )}
         </Box>
     );

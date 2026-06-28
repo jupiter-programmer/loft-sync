@@ -74,6 +74,7 @@ export const sidebarItems = [
         label: 'Profile',
         href: '/profile',
         icon: FiUser,
+        separator: 'divider',
     },
     {
         label: 'Settings',

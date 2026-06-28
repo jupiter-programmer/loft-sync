@@ -2,14 +2,18 @@ import Link from 'next/link';
 import { Avatar, Box, ButtonBase, Tooltip, Typography } from '@mui/material';
 import { FaArrowRightToBracket } from '@/assets/icons';
 import { Sejin } from '@/assets/images';
-export const UserCard = () => {
+export const UserCard = ({
+    onClick,
+} : {
+    onClick?: () => void;
+}) => {
     return (
         <Box sx={styles.parent}>
             <Link 
                 href='/profile' 
                 style={{ width: '100%' }} 
             >
-                <ButtonBase sx={styles.container}>
+                <ButtonBase sx={styles.container} onClick={onClick}>
                     <Box sx={{
                         display: 'flex',
                         alignItems: 'center',
@@ -49,7 +53,9 @@ const styles = {
     },
     container: {
         p: 1.5,
-        gap: 9,
+        width: { xs: '100%', sm: 'auto' },
+        gap: { sm: 9 },
+        justifyContent: { xs: 'space-between', md: 'normal' },
         background: `
             linear-gradient(to right, #170249e7, #420177e1, #170249e7)
         `,
