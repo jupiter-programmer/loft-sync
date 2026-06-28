@@ -26,6 +26,7 @@ export default function MobileSidebar () {
                     '& .MuiDrawer-paper': styles.sidebar,
                 }} 
                 onClose={() => setOpen(false)}
+                closeAfterTransition={false}
             >
                 <Brand/>
                 <ItemsContainer onItemClick={() => setOpen(false)}/>
