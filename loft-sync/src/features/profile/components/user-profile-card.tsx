@@ -54,7 +54,6 @@ export default function UserProfileCard () {
             <Grid size={{ xs: 12, lg: 7 }}>
                 <p>f</p>
                 <p>f</p>
-                <p>f</p>
             </Grid>
         </Grid>
     );
