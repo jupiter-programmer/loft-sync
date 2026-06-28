@@ -55,7 +55,6 @@ export default function UserProfileCard () {
                 <p>f</p>
                 <p>f</p>
                 <p>f</p>
-                <p>f</p>
             </Grid>
         </Grid>
     );
