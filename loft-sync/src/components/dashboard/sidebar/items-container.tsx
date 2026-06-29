@@ -61,7 +61,9 @@ const styles = {
         flexShrink: 0,
         justifyContent: 'flex-start',
         gap: 2,
+        border: '1px solid transparent',
         borderRadius: 2,
+        transition: 'border 0.5s',
         overflow: 'hidden',
     },
 };

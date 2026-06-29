@@ -35,6 +35,7 @@ export default function AccountMenu () {
             sx: styles.menu,
           },
         }}
+        sx={{ zIndex: 'var(--z-index)' }}
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >

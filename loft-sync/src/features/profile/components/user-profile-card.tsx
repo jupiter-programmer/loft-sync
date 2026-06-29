@@ -1,6 +1,9 @@
 import { Avatar, Box, Divider, Grid, Stack, Typography } from "@mui/material";
-import { Sejin } from '@/assets/images'
-import { HiOutlineMail, IoLocationOutline, LuPhone, PiBird, RiVerifiedBadgeFill } from '@/assets/icons'
+import { UserAvatar } from "@/components/ui";
+import VerifyBadge from "./verify-badge";
+import CompleteProgress from "./complete-progress";
+import { HiOutlineMail, IoLocationOutline, LuPhone, PiBird } from '@/assets/icons';
+import { Sejin } from '@/assets/images';
 export default function UserProfileCard () {
     const user = {
         email: 'mern.sejin@gmail.com',
@@ -8,70 +11,56 @@ export default function UserProfileCard () {
         phone: '+8801234567890',
     };
     const userInfo = [
-        { icon: IoLocationOutline, value: user.address },
-        { icon: HiOutlineMail, value: user.email },
-        { icon: LuPhone, value: user.phone },
+        user.address,
+        user.email,
+        user.phone,
     ];
     return (
-        <Grid container sx={styles.card}>
-            <Grid size={{ xs: 12, lg: 5 }}>
-                <Box sx={{ 
-                    display: { xs: 'inherit', md: 'flex' },
-                    textAlign: { xs: 'center', md: 'start' },
-                    gap: 2,
+        <Grid container spacing={2}>
+            <Grid size={{ xs: 12, md: 3.5 }}>
+                <Box sx={{
+                    ...styles.card,
+                    textAlign: 'center',
                 }}>
-                    <Avatar src={Sejin.src} sx={styles.avatar}>
-                        S
-                    </Avatar>
-                    <Box>
+                    <Box sx={{ pb: 1 }}>
+                        <UserAvatar size={100} sx={{ mx: 'auto', mb: 1 }}/>
+                        <VerifyBadge/>
                         <Typography sx={{
-                            fontSize: 25,
+                            fontSize: 20,
                             fontWeight: 500,
                             background: 'var(--gradient-primary)',
                         }} className='text-gradient'>
                             Sejin Ahmed
-                            <RiVerifiedBadgeFill 
-                                size={20} 
-                                color='#ffa205'
-                                style={{ marginBottom: -2, marginLeft: 4 }}
-                            />
                         </Typography>
-                        <Typography sx={{ fontSize: 13 }}>
-                            <PiBird size={17} style={{ marginBottom: -5, marginRight: 5 }}/>
+                        <Typography sx={{ fontSize: 14 }}>
                             Loft Owner
                         </Typography>
-                        <Box sx={{ pt: 2 }}>
-                            { userInfo.map(({ value, icon: Icon }, i) => 
-                                <Typography sx={styles.userInfo} key={i}>
-                                    <Icon/>
-                                    { value }
-                                </Typography>
-                            )}
-                        </Box>
                     </Box>
+                    <Box sx={{ pt: 1 }}>
+                        { userInfo.map((info, i) => 
+                            <Typography sx={{ fontSize: 13, mt: 0.3 }} key={i}>
+                                { info }
+                            </Typography>
+                        )}
+                    </Box>
+                    <CompleteProgress/>
                 </Box>
             </Grid>
-            <Grid size={{ xs: 12, lg: 7 }}>
-                <p>f</p>
-                <p>f</p>
+            <Grid size={{ xs: 12, md: 8.5 }}>
+                <Box sx={styles.card}>
+                    a
+                </Box>
             </Grid>
         </Grid>
     );
 };
 const styles = {
     card: {
-        p: { xs: 2, md: 4 },
+        p: 4,
         background: '#12023abd',
         backdropFilter: 'blur(5px)',
         border: '1px solid var(--border)',
         borderRadius: 4,
-    },
-    avatar: { 
-        height: { xs: 80, md: 100 }, 
-        width: { xs: 80, md: 100 }, 
-        fontSize: 50,
-        background: 'var(--gradient-primary)', 
-        mx: { xs: 'auto', md: 0 },
     },
     userInfo: { 
         color: '#dec3ff',

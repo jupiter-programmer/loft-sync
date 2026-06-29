@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Avatar, Box, ButtonBase, Tooltip, Typography } from '@mui/material';
 import { FaArrowRightToBracket } from '@/assets/icons';
 import { Sejin } from '@/assets/images';
+import { UserAvatar } from '@/components/ui';
 export const UserCard = ({
     onClick,
 } : {
@@ -20,9 +21,7 @@ export const UserCard = ({
                         gap: 1.5,
                     }}>
                         <Tooltip title='Sejin Ahmed'>
-                            <Avatar src={Sejin.src} sx={styles.avatar}>
-                                S
-                            </Avatar>
+                            <UserAvatar/>
                         </Tooltip>
                         <Box>
                             <Typography 
@@ -63,9 +62,6 @@ const styles = {
         borderRadius: 2,
         overflow: 'hidden',
         transition: '1s',
-    },
-    avatar: { 
-        background: 'var(--gradient-primary)',
     },
     name: {
         fontSize: 14,

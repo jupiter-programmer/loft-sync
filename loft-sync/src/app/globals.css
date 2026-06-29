@@ -37,7 +37,6 @@ input {
     align-items: center;
 }
 
-
 .sidebar-item.active button {
     background: linear-gradient(to right, #170249e7, #420177e1, #170249e7);
     border: 1px solid #510b86c2;
