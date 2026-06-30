@@ -1,7 +1,8 @@
-import './globals.css';
+import '../globals.css';
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 import { AppThemeProvider } from '@/providers';
+import { Header } from '@/components/marketing';
 import { TopLoader } from '@/components/ui';
 // font
 const spaceGrotesk = Space_Grotesk ({
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   description: 'Pigeon Loft Management Software.',
 };
 // root
-export default function RootLayout({
+export default function MarketingLayout ({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -24,6 +25,7 @@ export default function RootLayout({
       <AppThemeProvider>
         <body>
           <TopLoader/>
+          <Header/>
           { children }
         </body>
       </AppThemeProvider>

@@ -1,5 +1,6 @@
 :root {
     --theme: #000119;
+    --light: #12023abd;
     --lightpink: #eee0ff;
     --border: #1e104e;
     --border-2: #0d0a38;
@@ -35,6 +36,19 @@ input {
 }
 .items-center {
     align-items: center;
+}
+
+.nav-link.active {
+    position: relative;
+}
+.nav-link.active::before {
+    content: '';
+    position: absolute;
+    inset: -8px -14px;
+    background: #b31cdd4f;
+    filter: blur(18px);
+    border-radius: 999px;
+    z-index: -1;
 }
 
 .sidebar-item.active button {
